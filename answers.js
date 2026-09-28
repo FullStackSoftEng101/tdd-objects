@@ -10,12 +10,10 @@
  * @example
  * getCohort({cohort: 3476, name: "Charlie"}); // 3476
  */
-function getCohort(student) {
-  return student.cohort;
+export function getCohort(student) {
+  // TODO
+  
 }
-// console.debug(getCohort({ cohort: 2012, name: "Alice" })); //2012
-// console.debug(getCohort({ cohort: -1, name: "Bob" })); //-1
-// console.debug(getCohort({ cohort: 0, name: "Charlie" })); //0
 
 /**
  * @typedef {{cohort: number, name: string}} Student
@@ -32,19 +30,13 @@ function getCohort(student) {
  * @example
  * sortStudents({cohort: 1, name: "Alice"}, {cohort: 2, name: "Alice"}); // {cohort: 1, name: "Alice"}
  */
-function sortStudents(studentA, studentB) {
-  if (studentA.name <= studentB.name) {
+export function sortStudents(studentA, studentB) {
+
+  // TODO
+  if (studentA.name <= studentB.name)
     return studentA;
-  } else {
-    return studentB;
-  }
+
 }
-// console.debug(); //studentA
-// console.debug(); //studentA
-// console.debug(); //studentB
-// console.debug(
-//   sortStudents({ cohort: 1, name: "Alice" }, { cohort: 1, name: "Bob" }),
-// ); //
 
 /**
  * @typedef {{color: string, icon: string}} Flag
@@ -59,11 +51,17 @@ function sortStudents(studentA, studentB) {
  * @example
  * makeFlag("yellow", "triangle"); // { color: "yellow", icon: "triangle" }
  */
-function makeFlag(color, icon) {
-  return { color, icon };
+export function makeFlag(color, icon) {
+  // TODO
+const flag{};
+flag.color=color;
+flag.icon =icon;
+return flag;
 }
-// console.debug(makeFlag("red", "circle")); //{ color: "red", icon: "circle" }
-// console.debug("", ""); //{ color: "", icon: "" }
+//or
+
+const flag = { color, icon};
+return flag;
 
 /**
  * @typedef {{value: number}} Count
@@ -77,14 +75,14 @@ function makeFlag(color, icon) {
  * @example
  * increment({value: -5}); // {value: -4}
  */
-function increment(count) {
-  count.value += 1;
+export function increment(count) {
+  // TODO
+  count.value+=1;
   return count;
+
 }
-// console.debug(increment({ value: 1 }))//{ value: 2 }
-// console.debug(increment({ value: -5 }))//{ value: -4 }
-// console.debug(increment({ value: 0 }))//{ value: 1 }
-// console.debug(increment({ value: 9.8 }))//{ value: 10.8 }
+//or 
+return {value:count.value+1};
 
 /**
  * @typedef {{x: number, y: number}} Location
@@ -109,14 +107,9 @@ function increment(count) {
  * getTaxicabDistance({x: 5, y: 5}, {x: 5, y: 5}); // 0
  *
  */
-function getTaxicabDistance(from, to) {
-  const dx = Math.abs(to.x - from.x);
-  const dy = Math.abs(to.y - from.y);
-  return dx + dy;
+export function getTaxicabDistance(from, to) {
+  // TODO
 }
-// console.debug(getTaxicabDistance({ x: 0, y: 0 }, { x: 3, y: 4 })); //7
-// console.debug(getTaxicabDistance({ x: 5, y: 5 }, { x: 5, y: 5 })); //0
-// console.debug(getTaxicabDistance({ x: 1, y: 2 }, { x: -1, y: -2 })); //6
 
 /**
  * @typedef {{name: string, isHerbivore: boolean}} Animal
@@ -130,34 +123,16 @@ function getTaxicabDistance(from, to) {
  * @example
  * getHerbivores([{name: "Rabbit", isHerbivore: true}]); // [{name: "Rabbit", isHerbivore: true}]
  */
-
-function getHerbivores(animals) {
-  const herbivores = [];
-  for (const animal of animals) {
-    if (animal.isHerbivore) {
-      herbivores.push(animal);
-    }
+export function getHerbivores(animals) {
+  // TODO
+const herbivors=[];
+for (conts animal of animals){
+  if (animals.isHerbivore){
+    getHerbivores.push(animal)
   }
-  return herbivores;
+}
 }
 
-/**
- * @typedef {{name: string, quantity: number, price: number}} Item
- *
- * You may assume that:
- *  - quantities will be non-negative integers
- *  - prices will be non-negative numbers
- *
- * @param {Item[]} cart
- * @returns {number} the total cost of all items in the given cart
- *
- * @example
- * getTotalCost([{name: "Hourglass", quantity: 2, price: 3.12}, {name: "Comb", quantity: 1, price: 2.50}]); // 8.74
- * @example
- * getTotalCost([]); // 0
- * @example
- * getTotalCost([{name: "Notebook", quantity: 0, price: 5}]); // 0
- */
 /**
  * @typedef {{name: string, isCarnivore: boolean}} Animal
  * @param {Animal[]} animals
@@ -170,12 +145,9 @@ function getHerbivores(animals) {
  * @example
  * getCarnivoreNames([{name: "Wolf", isCarnivore: true}]); // ["Wolf"]
  */
-function getCarnivoreNames(animals) {
-  const carnivores = [];
-  for (const animal of animals) {
-    if (animal.isCarnivore) carnivores.push(animal.name);
-  }
-  return carnivores;
+export function getCarnivoreNames(animals) {
+  // TODO
+
 }
 
 /**
@@ -195,12 +167,8 @@ function getCarnivoreNames(animals) {
  * @example
  * getTotalCost([{name: "Notebook", quantity: 0, price: 5}]); // 0
  */
-function getTotalCost(cart) {
-  let cost = 0;
-  for (const item of cart) {
-    cost += item.price * item.quantity;
-  }
-  return cost;
+export function getTotalCost(cart) {
+  // TODO
 }
 
 /**
@@ -219,12 +187,8 @@ function getTotalCost(cart) {
  * @example
  * zip(["x"], ["x"]); // {x: "x"}
  */
-function zip(keys, values) {
-  const object = {};
-  for (let i = 0; i < keys.length; i++) {
-    object[keys[i]] = values[i];
-  }
-  return object;
+export function zip(keys, values) {
+  // TODO
 }
 
 /**
@@ -239,29 +203,6 @@ function zip(keys, values) {
  * @example
  * countCharacters("aAa"); // {a: 2, A: 1}
  */
-function countCharacters(word) {
-  const counts = {};
-  for (const character of word) {
-    if (character in counts) {
-      counts[character] += 1;
-    } else {
-      counts[character] = 1;
-    }
-  }
-  return counts;
+export function countCharacters(word) {
+  // TODO
 }
-
-console.debug(); //
-
-export {
-  getCohort,
-  sortStudents,
-  makeFlag,
-  increment,
-  getTaxicabDistance,
-  getHerbivores,
-  getCarnivoreNames,
-  getTotalCost,
-  zip,
-  countCharacters,
-};
